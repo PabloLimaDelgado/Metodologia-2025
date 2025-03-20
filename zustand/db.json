@@ -1,0 +1,28 @@
+{
+  "tareas": [
+    {
+      "id": "123",
+      "titulo": "Tarea 1",
+      "descripcion": "Descripcion 1",
+      "fechaLimite": "22212001"
+    },
+    {
+      "id": "bdf1",
+      "nuevaTarea": {
+        "titulo": "Tarea2",
+        "descripcion": "2",
+        "fechaLimite": "2001-10-22",
+        "id": "2025-03-20T01:04:02.009Z"
+      }
+    },
+    {
+      "id": "1460",
+      "nuevaTarea": {
+        "titulo": "Tarea3",
+        "descripcion": "3",
+        "fechaLimite": "2001-10-10",
+        "id": "2025-03-20T01:04:18.830Z"
+      }
+    }
+  ]
+}

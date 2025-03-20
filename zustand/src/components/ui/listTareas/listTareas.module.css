@@ -1,0 +1,27 @@
+.containerPrincipalList {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  flex-direction: column;
+}
+
+.containerTitleAndButton {
+  display: flex;
+  justify-content: space-around;
+  gap: 1rem;
+  width: 70%;
+}
+
+.containerList {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  background-color: gray;
+  width: 70%;
+  overflow-y: auto;
+  max-height: 62vh;
+  min-height: 60vh;
+  padding: 0.4rem;
+}
