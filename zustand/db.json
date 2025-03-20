@@ -1,28 +1,16 @@
 {
   "tareas": [
     {
-      "id": "123",
+      "id": "e3dc9110-7025-4924-8b17-5daa0a54eb0b",
       "titulo": "Tarea 1",
-      "descripcion": "Descripcion 1",
-      "fechaLimite": "22212001"
+      "descripcion": "Tarea uno a terminar\n",
+      "fechaLimite": "2025-10-20"
     },
     {
-      "id": "bdf1",
-      "nuevaTarea": {
-        "titulo": "Tarea2",
-        "descripcion": "2",
-        "fechaLimite": "2001-10-22",
-        "id": "2025-03-20T01:04:02.009Z"
-      }
-    },
-    {
-      "id": "1460",
-      "nuevaTarea": {
-        "titulo": "Tarea3",
-        "descripcion": "3",
-        "fechaLimite": "2001-10-10",
-        "id": "2025-03-20T01:04:18.830Z"
-      }
+      "id": "5079eb64-5b0c-4653-af43-a4d3ba447b7f",
+      "titulo": "Tarea 2",
+      "descripcion": "Tarea 2 a completar",
+      "fechaLimite": "2025-11-10"
     }
   ]
 }

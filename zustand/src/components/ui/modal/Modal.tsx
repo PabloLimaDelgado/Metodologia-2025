@@ -8,7 +8,6 @@ import { editarTarea } from "../../../http/tareas";
 type IModal = {
   handleCloseModal: VoidFunction;
 };
-
 const initialState: ITarea = {
   titulo: "",
   descripcion: "",
@@ -18,16 +17,13 @@ const initialState: ITarea = {
 export const Modal: FC<IModal> = ({ handleCloseModal }) => {
   const tareaActiva = tareaStore((state) => state.tareaActiva);
   const setTareaActiva = tareaStore((state) => state.setTareaActiva);
-  const [formValues, setFormValue] = useState<ITarea>(initialState);
 
-  const { createTarea, putEditarTarea } = useTareas();
+  const { crearTarea, putTareaEditar } = useTareas();
+
+  const [formValues, setFormValues] = useState<ITarea>(initialState);
 
   useEffect(() => {
-    if (tareaActiva) {
-      setFormValue(tareaActiva);
-    } else {
-      setFormValue(initialState);
-    }
+    if (tareaActiva) setFormValues(tareaActiva);
   }, [tareaActiva]);
 
   const handleChange = (
@@ -35,19 +31,14 @@ export const Modal: FC<IModal> = ({ handleCloseModal }) => {
   ) => {
     const { name, value } = e.target;
 
-    setFormValue((prev) => ({ ...prev, [`${name}`]: value }));
+    setFormValues((prev) => ({ ...prev, [`${name}`]: value }));
   };
 
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
-    console.log("Formulario enviado", formValues);
-
     if (tareaActiva) {
-      putEditarTarea(formValues);
-    } else {
-      createTarea({ ...formValues, id: new Date().toISOString() });
-    }
-
+      putTareaEditar(formValues);
+    } else crearTarea({ ...formValues, id: crypto.randomUUID() });
     setTareaActiva(null);
     handleCloseModal();
   };

@@ -1,7 +1,6 @@
 import { FC } from "react";
 import { ITarea } from "../../../types/ITareas.ts";
 import styles from "./cardList.module.css";
-import { eliminarTarea } from "../../../http/tareas.ts";
 import { useTareas } from "../../../hooks/useTareas.ts";
 
 type ICardList = {
@@ -10,17 +9,10 @@ type ICardList = {
 };
 
 export const CardList: FC<ICardList> = ({ tarea, handleOpenModal }) => {
-  const { deleteEliminarTarea } = useTareas();
-
-  const eliminarTareaId = async () => {
-    try {
-      await deleteEliminarTarea(tarea.id!);
-      console.log(`Tarea ${tarea.id} eliminada con éxito`);
-    } catch (error) {
-      console.error("Error al eliminar la tarea:", error);
-    }
+  const {eliminarTarea} = useTareas()
+  const eliminarTareaById = () => {
+    eliminarTarea(tarea.id!)
   };
-
   const editarTarea = () => {
     handleOpenModal(tarea);
   };
@@ -36,7 +28,7 @@ export const CardList: FC<ICardList> = ({ tarea, handleOpenModal }) => {
       </div>
       <div className={styles.actionCard}>
         <button onClick={editarTarea}>Editar</button>
-        <button onClick={eliminarTareaId}>Eliminar</button>
+        <button onClick={eliminarTareaById}>Eliminar</button>
       </div>
     </div>
   );

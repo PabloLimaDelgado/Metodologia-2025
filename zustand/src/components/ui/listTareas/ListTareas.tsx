@@ -9,13 +9,14 @@ import { useTareas } from "../../../hooks/useTareas.ts";
 
 export const ListTareas = () => {
   const setTareaActiva = tareaStore((state) => state.setTareaActiva);
+
   const { getTareas, tareas } = useTareas();
+
   useEffect(() => {
     getTareas();
   }, []);
 
   const [openModalTarea, setOpenModalTarea] = useState(false);
-
   const handleOpenModal = (tarea: ITarea) => {
     setTareaActiva(tarea);
     setOpenModalTarea(true);
@@ -24,13 +25,18 @@ export const ListTareas = () => {
   const handleCloseModal = () => {
     setOpenModalTarea(false);
   };
-
   return (
     <>
       <div className={styles.containerPrincipalList}>
         <div className={styles.containerTitleAndButton}>
           <h2>Lista de tareas</h2>
-          <button onClick={() => setOpenModalTarea(true)}>Agregar Tarea</button>
+          <button
+            onClick={() => {
+              setOpenModalTarea(true);
+            }}
+          >
+            Agregar Tarea
+          </button>
         </div>
         <div className={styles.containerList}>
           {tareas.length > 0 ? (

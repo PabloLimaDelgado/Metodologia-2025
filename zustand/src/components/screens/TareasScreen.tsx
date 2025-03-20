@@ -13,12 +13,11 @@ export const TareasScreen = () => {
   useEffect(() => {
     getTareas();
   }, []);
+
   return (
-    <>
-      <div>
-        <Header />
-        <ListTareas />
-      </div>
-    </>
+    <div>
+      <Header />
+      <ListTareas />
+    </div>
   );
 };
