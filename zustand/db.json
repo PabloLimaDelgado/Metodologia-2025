@@ -11,6 +11,12 @@
       "titulo": "Tarea 2",
       "descripcion": "Tarea 2 a completar",
       "fechaLimite": "2025-11-10"
+    },
+    {
+      "id": "e3dc9110-7025-4924-8b17-5daa0a54qweqw",
+      "titulo": "Tarea 4",
+      "descripcion": "Tarea uno a terminar\n",
+      "fechaLimite": "2025-10-20"
     }
   ]
 }

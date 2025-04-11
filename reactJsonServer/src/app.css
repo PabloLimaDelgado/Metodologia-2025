@@ -1,0 +1,26 @@
+.divContainer {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.divContainer ul{
+    background-color: rgb(187, 170, 170);
+    padding: 0.4rem;
+    border-radius: 0.4rem;
+    list-style: none;
+}
+
+.divContainer div{
+    display: flex;
+    flex-direction: row;
+    gap: 0.4rem;
+}
+
+.divContainer div button{
+    padding: 0.4rem;
+}
