@@ -14,4 +14,8 @@ Bienvenido/a a este repositorio donde se encuentran los trabajos prácticos real
 <small>Uso de react-router para el manejo de paginas.</small>
 ---
 
+### 3. Yup
+<small>Uso de yup para el manejo de formularios.</small>
+---
+
 > Este repositorio está en constante actualización con los avances de los trabajos prácticos.
